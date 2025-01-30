@@ -1,0 +1,41 @@
+---
+import '@fontsource-variable/nunito-sans';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body >
+		<Header/>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html{
+		font-family: 'Nunito Sans Variable',system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		background: linear-gradient(to bottom right, #f1f9f4, #effbf4, #eefcf3 );
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+	body.dark{
+		background: linear-gradient(to bottom right, #061f46, #092f6b, #0D47A1 )  ;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>

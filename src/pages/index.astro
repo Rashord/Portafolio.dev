@@ -1,0 +1,115 @@
+---
+import ButtomIcons from '../components/ButtomIcons.astro';
+import MailIcon from '../components/icons/mailIcon.astro';
+import CvIcon from '../components/icons/CvIcon.astro';
+import GitIcon from '../components/icons/GitIcon.astro';
+import LinkIcon from '../components/icons/LinkIcon.astro';
+import SectionCont from '../components/SectionCont.astro';
+import Layout from '../layouts/Layout.astro';
+import Pills from '../components/Pills.astro';
+
+
+---
+
+<Layout>
+	<main class="max-w-[30rem] sm:max-w-[36rem] md:max-w-[48rem] lg:max-w-[48rem] items-start sm:items-center sm:mx-auto px-5 justify-center flex flex-col"> 
+		<section class="flex flex-col items-start justify-start text-[#2C3E50] dark:text-[#64DD17] mt-16 mb-2 sm:my-28 md:my-36 lg:my-44">
+			<h1 class="font-[900] pl-4">
+				
+				<div class="flex flex-row mb-[-2rem] sm:mb-[-4rem] justify-between items-center">
+					<div class="flex flex-col">
+						<span class="text-sm sm:text-2xl font-[800] italic"> Hola, mi nombre es</span>
+						<span class="text-6xl sm:text-8xl md:text-10xl">Richard</span>
+					</div>
+					
+					<img class="size-[6rem] sm:size-[6rem] md:size-[8rem] lg:size-[10rem] mx-5
+							rounded-tl-[5%] rounded-br-[5%] rounded-bl-[5%] rounded-tr-[60%] border-[#BDC3C7]
+							border-[5px] hover:scale-110 transition" src="/Images/Image6v2.webp" alt="Imagen Referencial de mi persona"/>
+				</div>
+				<span class="text-5xl sm:text-8xl md:text-10xl">Calbullanca </span>
+			</h1>
+
+			<h2 class="text-lg sm:text-3xl italic text-pretty pl-4 text-wrap opacity-90 flex sm:mb-5 ">
+				Apasionado por crear soluciones tecnológicas únicas y eficientes.
+			</h2>
+			
+			<ul>
+				<li class="flex flex-row items-center justify-center fill-[#1ABC9C] dark:fill-[#FFEB3B] sm:gap-x-2 ">
+					<ButtomIcons href="https://cl.linkedin.com/in/richard-calbullanca">
+						<LinkIcon  class='size-8 md:size-10 fill-[#1ABC9C] dark:fill-[#FFEB3B]'/>
+					</ButtomIcons>
+					<ButtomIcons href="https://github.com/Rashord">
+						<GitIcon class='size-8 md:size-10 fill-[#1ABC9C] dark:fill-[#FFEB3B]'/>
+					</ButtomIcons>
+					<ButtomIcons>
+						<CvIcon class='size-9 md:size-11 stroke-[#1ABC9C] dark:stroke-[#FFEB3B] '/>
+					</ButtomIcons>
+				</li>
+			</ul>
+		</section> 
+
+		<!-- sobre mí -->
+		<section id="sobremi" class="flex flex-row py-5 pl-4 justify-start items-start text-[#2C3E50] dark:text-[#64DD17] w-full">
+			<section class="flex flex-col">
+				<h1 
+					class="text-2xl sm:text-4xl flex justify-start mb-2"
+					style=" font-weight: 900;"
+				>
+					Sobre mí
+				</h1>
+				<div class="dark:opacity-90 text-base sm:text-lg font-[500] text-pretty flex flex-col py-3 text-[#7F8C8D] dark:text-[#E0E0E0]">
+					<h2 >
+						Egresado en Ingeniería Civil en Informática, especializado en desarrollar soluciones tecnológicas utilizando React. Mi experiencia en desarrollo me ha permitido comprender las necesidades del usuario y mejorar la eficacia en la gestión de la información. Con el tiempo, me he convertido en una persona enfocada en encontrar soluciones eficientes, modernas y fáciles de entender.
+					</h2>
+				</div>
+			</section>			
+		</section>
+
+
+		<!-- Educacion -->
+		 <section class="flex flex-col py-5 pl-4  w-full items-start mb-2">
+			<h1 class="text-2xl sm:text-4xl font-[900] text-[#2C3E50] dark:text-[#64DD17]">
+				Educación
+			</h1>
+			<h2 class="flex flex-row items-center text-base sm:text-lg font-[500] text-wrap py-3 max-w-[90%]">
+				<img 
+					class="ubb dark h-[59px] w-[92px] mr-2"
+					src="/Images/escudo-monocromatico.webp" alt="Logo Universidad Del Bío-Bío" 
+				> <br>
+				<span class="dark:opacity-90 text-[#7F8C8D] dark:text-[#E0E0E0]">Titulo de Ingeniería Civil en Informática</span>
+			</h2>
+		 </section>
+
+		<!-- Proyectos -->
+		<section id="Proyectos" class="flex flex-col py-5 pl-4 text-[#2C3E50] dark:text-[#64DD17] w-full items-start">
+			<h1 class="text-2xl sm:text-4xl font-[900] mb-3"> Proyectos</h1>
+				<SectionCont >
+					<div class="flex flex-col w-full gap-y-3">
+						<img id="image" class="sm:h-[19rem] md:h-[23rem] w-full rounded-2xl  opacity-90 hover:opacity-100 transition" src="/Images/ImgPractica.webp"/>
+						<h1 class="font-bold text-[#7F8C8D] dark:text-[#E0E0E0] text-base sm:text-lg text-pretty">Proyecto de Práctica Profesional - Sistema de Gestión de Suministros para el Servicio de Salud Arauco</h1>	
+						<h2 class="font-bold opacity-80 text-[#7F8C8D] dark:text-[#E0E0E0] text-sm sm:text-base text-pretty"> 
+							Aplicación web diseñada específicamente para la gestión de las mantenciones realizadas a diferentes tipos de equipos médicos dentro de hospitales pertenecientes a la provincia de Arauco.
+						</h2>	
+						<div class="flex flex-row">
+							<Pills>React</Pills>
+							<Pills>Node.js</Pills>
+							<Pills>CSS</Pills>
+							<Pills>MySQL</Pills>
+						</div>
+					</div>
+				</SectionCont>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.ubb {
+		filter: brightness(0) saturate(100%) invert(56%) sepia(81%) saturate(456%) hue-rotate(118deg) brightness(93%) contrast(83%);
+		
+	}
+	body.dark 
+		.ubb {
+		filter: brightness(0) saturate(100%) invert(89%) sepia(69%) saturate(3137%) hue-rotate(324deg) brightness(110%) contrast(104%); ;
+	}
+		
+</style>
